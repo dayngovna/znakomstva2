@@ -59,7 +59,7 @@ async def ekfar(ctx):#help
     embed.add_field(name="Удачного пользования!",value="Создан тут https://discord.gg/3qW8tGU9",inline=False)
     await ctx.send(embed=embed)
 @client.command()
-async def admindata():
+async def admindata(ctx):
     with open('datavinchik.json') as adfile:
         data = json.load(adfile)
         await ctx.autor.send(data)
