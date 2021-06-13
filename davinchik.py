@@ -62,5 +62,5 @@ async def ekfar(ctx):#help
 async def admindata(ctx):
     with open('datavinchik.json') as adfile:
         data = json.load(adfile)
-        await ctx.autor.send(data)
+        await ctx.author.send(data)
 client.run(os.environ['token'])
