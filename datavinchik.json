@@ -1,14 +1,16 @@
 [
-   {'name': '@dixlafozz', 
-   'years': '17', 
-   'floor': 'man', 
-   'im': 'ekfar', 
-   'ava': 'https://cdn.discordapp.com/avatars/475741103132377101/a8ecd51d8888c0686089f98db471c741.webp?size=1024%27%7D'
-   },
-   {'name': '@воины донбасса', 
-   'years': 'возраст', 
-   'floor': 'пол', 
-   'im': 'о себе', 
-   'ava': 'https://cdn.discordapp.com/avatars/355378010762903553/4c20e2e2298facb55f027c42db605316.webp?size=1024%27%7D'
-    },
+ {
+  "name": "<@475741103132377101>",
+  "years": "17",
+  "floor": "man",
+  "im": "ekfar",
+  "ava": "https://cdn.discordapp.com/avatars/475741103132377101/a8ecd51d8888c0686089f98db471c741.webp?size=1024"
+ },
+ {
+  "name": "<@355378010762903553>",
+  "years": "возраст",
+  "floor": "пол",
+  "im": "о себе'",
+  "ava": "https://cdn.discordapp.com/avatars/355378010762903553/4c20e2e2298facb55f027c42db605316.webp?size=1024%27%7D"
+ }
 ]
