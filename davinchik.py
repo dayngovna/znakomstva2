@@ -47,12 +47,20 @@ async def find(ctx,years):#поиск анкеты
                 embed.add_field(name="Пол",value=xx['floor'])
                 embed.add_field(name="О себе",value=xx['im'],inline=False)
                 await ctx.author.send(embed=embed)
+            else:
+                await ctx.author.send("Мы не нашли анкету,измените запрос")
 @client.command()
 async def ekfar(ctx):#help
     embed = discord.Embed(title="Это бот знакомств от экфара")
+    embed.add_field(name="Бот работает через лс",value="Просто напиши ему команду",inline=False)
     embed.add_field(name="Чтобы создать анкету пропиши",value=">create возраст пол текст",inline=False)
     embed.add_field(name="Чтобы найти анкету по возрасту пропиши",value=">find возраст",inline=False)
     embed.add_field(name="Чтобы вызвать это меню пропиши",value=">ekfar",inline=False)
     embed.add_field(name="Удачного пользования!",value="Создан тут https://discord.gg/3qW8tGU9",inline=False)
     await ctx.send(embed=embed)
+@client.command()
+async def admindata():
+    with open('datavinchik.json') as adfile:
+        data = json.load(adfile)
+        await ctx.autor.send(data)
 client.run(os.environ['token'])
