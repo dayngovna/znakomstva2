@@ -61,17 +61,19 @@ async def ekfar(ctx):#help
     await ctx.send(embed=embed)
 @client.command()
 async def random(ctx):#random      
-     with open('datavinchik.json') as randfile:      
-         data1 = json.load(randfile)
-         print("len="+str(len(data1)-1))
-         rand = randint(0,len(data1)-1)
-         print("rand="+str(rand))
-         embed = discord.Embed(title=f'Анкета '+data1[rand]['name'])
-         embed.set_thumbnail(url=data1[rand]['ava'])
-         embed.add_field(name="Возраст",value=data1[rand]['years'])
-         embed.add_field(name="Пол",value=data1[rand]['floor'])
-         embed.add_field(name="О себе",value=data1[rand]['im'],inline=False)
-         await ctx.author.send(embed=embed)    
+     with open('datavinchik.json') as randfile:
+            #
+            data1 = json.load(randfile)
+            print("len="+str(len(data1)-1))
+            rand = randint(0,len(data1)-1)
+            print("rand="+str(rand))
+            await ctx.author.send("Ща все будет")
+            embed = discord.Embed(title=f'Анкета '+data1[rand]['name'])
+            embed.set_thumbnail(url=data1[rand]['ava'])
+            embed.add_field(name="Возраст",value=data1[rand]['years'])
+            embed.add_field(name="Пол",value=data1[rand]['floor'])
+            embed.add_field(name="О себе",value=data1[rand]['im'],inline=False)
+            await ctx.author.send(embed=embed)    
 @client.command()
 async def admindata(ctx):
     with open('datavinchik.json') as adfile:
