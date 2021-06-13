@@ -54,10 +54,24 @@ async def ekfar(ctx):#help
     embed = discord.Embed(title="Это бот знакомств от экфара")
     embed.add_field(name="Бот работает через лс",value="Просто напиши ему команду",inline=False)
     embed.add_field(name="Чтобы создать анкету пропиши",value=">create возраст пол текст",inline=False)
+    embed.add_field(name="Чтобы найти случайную анкету пропиши",value=">random",inline=False)
     embed.add_field(name="Чтобы найти анкету по возрасту пропиши",value=">find возраст",inline=False)
     embed.add_field(name="Чтобы вызвать это меню пропиши",value=">ekfar",inline=False)
     embed.add_field(name="Удачного пользования!",value="Создан тут https://discord.gg/3qW8tGU9",inline=False)
     await ctx.send(embed=embed)
+@client.command()
+async def random(ctx):#random      
+     with open('datavinchik.json') as randfile:      
+         data1 = json.load(randfile)
+         print("len="+str(len(data1)-1))
+         rand = randint(0,len(data1)-1)
+         print("rand="+str(rand))
+         embed = discord.Embed(title=f'Анкета '+data1[rand]['name'])
+         embed.set_thumbnail(url=data1[rand]['ava'])
+         embed.add_field(name="Возраст",value=data1[rand]['years'])
+         embed.add_field(name="Пол",value=data1[rand]['floor'])
+         embed.add_field(name="О себе",value=data1[rand]['im'],inline=False)
+         await ctx.author.send(embed=embed)    
 @client.command()
 async def admindata(ctx):
     with open('datavinchik.json') as adfile:
