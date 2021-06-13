@@ -3,6 +3,7 @@ import os
 import discord
 from discord.ext import commands
 import pytz
+from random import randint
 client = commands.Bot(command_prefix=">",intents=discord.Intents.all())
 
 @client.event
