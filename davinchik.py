@@ -58,7 +58,7 @@ async def ekfar(ctx):#help
     embed.add_field(name="Чтобы найти случайную анкету пропиши",value=">random",inline=False)
     embed.add_field(name="Чтобы найти анкету по возрасту пропиши",value=">find возраст",inline=False)
     embed.add_field(name="Чтобы вызвать это меню пропиши",value=">ekfar",inline=False)
-    embed.add_field(name="Удачного пользования!",value="Создан тут https://discord.gg/3qW8tGU9",inline=False)
+    embed.add_field(name="Удачного пользования!",value="Создан тут https://discord.gg/sPruSKek2n",inline=False)
     await ctx.send(embed=embed)
 @client.command()
 async def random(ctx):#random      
