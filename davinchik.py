@@ -80,8 +80,5 @@ async def admindata(ctx):
     with open('datavinchik.json') as adfile:
         data = json.load(adfile)
         await ctx.author.send(data)
-@client.command()
-async def reklam(ctx, role: discord.Role, *, message):
-    for member in role.members:
-        await member.send(message)
+
 client.run(os.environ['token'])
